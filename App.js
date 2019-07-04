@@ -34,12 +34,18 @@ class App extends Component{
    {  
       event.preventDefault();
       var temp=this.state.emptyvalue;
-      var templist= this.state.messagelist;
+      if(temp!="")
+      {
+        var templist= this.state.messagelist;
       //alert(temp);
       templist.push(temp);
       this.setState({
-       messagelist:templist
-     });
+       messagelist:templist,
+       emptyvalue:""
+        });
+      }
+      
+     
 
    }
    
