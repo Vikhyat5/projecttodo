@@ -57,10 +57,11 @@ class App extends Component{
     return(
       <div>
           <form className="theinputbox" onSubmit={this.handlesubmit}>
-          <input type="text" value={this.state.emptyvalue} onChange={this.handleinput}></input>
-          <input Type="submit"  ></input>
+          <input className="theinputfeild" type="text" value={this.state.emptyvalue} onChange={this.handleinput}></input>
+          <input className="thesubmitbutton" Type="submit" value="ADD" ></input>
           </form>
           
+        
           {this.state.messagelist.map(nlist=><Taskbox messagebox={nlist}></Taskbox>)}
       </div>
            
