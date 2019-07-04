@@ -1,0 +1,31 @@
+body{
+  background-color:#eff5f5;
+}
+.thebox
+{
+  height:auto;
+  width:100%;
+  background-color:#fff;
+}
+
+.thetitle
+{
+   height:30px;
+   width:100%;
+   border-radius: 5% 5% 0 0;
+   box-shadow: 2px 5px #888888;
+}
+.themessage
+{
+   height:150px;
+   width:100%;
+   border-radius: 0 0 5% 5%;
+   
+}
+
+.theinputbox
+{
+   width:100%;
+   height:70px;
+   
+}
