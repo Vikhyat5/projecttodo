@@ -29,3 +29,21 @@ body{
    height:70px;
    
 }
+
+.theinputfeild
+{
+  width:60%;
+  height:80%;
+  border-radius: 2% 2% 2% 2%;
+  color:#001a14;
+
+}
+
+.thesubmitbutton
+{
+   width:30%;
+   height:60%;
+   background-color:#b34700;
+   
+}
+
