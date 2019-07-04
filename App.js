@@ -14,32 +14,46 @@ class App extends Component{
        this.state= {
             emptyvalue:"",
             tasktime: [],
-            messagelist:["task1","task2","task3","task4"]
+            messagelist:[]
        }
-       this.habdleinput=this.handleinput.bind(this);
-
+       //this.handlesubmit=this.handlesubmit.bind(this);
+       this.handleinput=this.handleinput.bind(this);
        
+      this.handlesubmit=this.handlesubmit.bind(this);
    }
 
-   handleinput(event)
+
+  
+
+   handleinput =(event) =>
    {
-        //alert("You are here" + );
-       var thevk= event.target.value;
-       var copystring= this.state.messagelist;
-       copystring.push(thevk)
-      
-
-        
+    this.setState({emptyvalue:event.target.value});
    }
+   
+   handlesubmit =(event) =>
+   {  
+      event.preventDefault();
+      var temp=this.state.emptyvalue;
+      var templist= this.state.messagelist;
+      //alert(temp);
+      templist.push(temp);
+      this.setState({
+       messagelist:templist
+     });
+
+   }
+   
+  
+
 
   render()
   {
     return(
       <div>
-          <div className="theinputbox">
+          <form className="theinputbox" onSubmit={this.handlesubmit}>
           <input type="text" value={this.state.emptyvalue} onChange={this.handleinput}></input>
-          <input Type="submit" value="ADD"></input>
-          </div>
+          <input Type="submit"  ></input>
+          </form>
           
           {this.state.messagelist.map(nlist=><Taskbox messagebox={nlist}></Taskbox>)}
       </div>
